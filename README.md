@@ -86,7 +86,7 @@
         <p>S1 Akuakultur yang berfokus di bidang Bioteknologi dan Molekuler sektor perikanan.</p>
 
         <div class="links">
-            <a href="https://www.instagram.com/dandisetio_w?igsh=MTI0NG1iY3huMXR0dg==" class="link-card instagram" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/dandisetio_w?igsh=MWE5NmNxeHA1Y21z" class="link-card instagram" target="_blank">Instagram</a>
             <a href="https://www.linkedin.com/in/dandi-setio-wibowo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="link-card linkedin" target="_blank">LinkedIn</a>
             <a href="https://www.facebook.com/share/184nLCPj1L/" class="link-card facebook" target="_blank">Facebook</a>
             <a href="https://scholar.google.com/citations?hl=id&authuser=2&user=SQh-fL0AAAAJ" class="link-card">Scholar</a>
