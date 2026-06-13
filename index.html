@@ -40,7 +40,6 @@
         .ambient-glow-2 { position: absolute; bottom: -10%; right: -20%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(168, 85, 247, 0.08), transparent 60%); border-radius: 50%; z-index: 0; filter: blur(60px); pointer-events: none; animation: pulse 10s infinite alternate-reverse; }
         @keyframes pulse { 0% { transform: scale(0.9); opacity: 0.7; } 100% { transform: scale(1.1); opacity: 1; } }
 
-        /* Wadah Utama Diperlebar menjadi 520px */
         .container {
             width: 100%;
             max-width: 520px; 
@@ -75,14 +74,13 @@
             box-shadow: 0 15px 40px rgba(168, 85, 247, 0.35);
         }
 
-        /* Teks Nama yang Profesional & Terkunci 1 Baris */
         .name-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.4rem, 6.5vw, 2.2rem); /* Ukuran fleksibel sesuai layar */
+            font-size: clamp(1.4rem, 6.5vw, 2.2rem); 
             font-weight: 800;
             margin: 0 0 6px 0;
             letter-spacing: -0.5px;
-            white-space: nowrap; /* Mengunci agar nama tidak turun ke baris baru */
+            white-space: nowrap; 
             background: linear-gradient(135deg, #ffffff, #cbd5e1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -112,7 +110,7 @@
             max-width: 95%;
         }
 
-        /* ── IKON SOSIAL ── */
+        /* ── IKON SOSIAL PERSONAL ── */
         .social-row {
             display: flex;
             justify-content: center;
@@ -141,6 +139,7 @@
         .social-btn.email:hover { color: #ea4335; border-color: #ea4335; background: rgba(234, 67, 53, 0.1); box-shadow: 0 10px 20px rgba(234, 67, 53, 0.2); }
         .social-btn.linkedin:hover { color: #0A66C2; border-color: #0A66C2; background: rgba(10, 102, 194, 0.1); box-shadow: 0 10px 20px rgba(10, 102, 194, 0.2); }
         .social-btn.instagram:hover { color: #E1306C; border-color: #E1306C; background: rgba(225, 48, 108, 0.1); box-shadow: 0 10px 20px rgba(225, 48, 108, 0.2); }
+        .social-btn.facebook:hover { color: #1877F2; border-color: #1877F2; background: rgba(24, 119, 242, 0.1); box-shadow: 0 10px 20px rgba(24, 119, 242, 0.2); }
 
         /* ── TAUTAN STANDAR ── */
         .links {
@@ -170,24 +169,11 @@
             box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
         }
 
-        .link-card i {
-            font-size: 1.3rem;
-            width: 24px;
-            text-align: center;
-            color: var(--text-muted);
-            transition: 0.3s ease;
-        }
-
-        .link-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--border-hover);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.4);
-            background: rgba(30, 41, 59, 0.8);
-        }
-
+        .link-card i { font-size: 1.3rem; width: 24px; text-align: center; color: var(--text-muted); transition: 0.3s ease; }
+        .link-card:hover { transform: translateY(-4px); border-color: var(--border-hover); box-shadow: 0 15px 25px rgba(0,0,0,0.4); background: rgba(30, 41, 59, 0.8); }
         .link-card:hover i { color: #ffffff; transform: scale(1.1); }
 
-        /* ── KARTU KHUSUS AREs (FEATURED) ── */
+        /* ── KARTU CONTAINER AREs (FEATURED) ── */
         .featured-card {
             margin-top: 10px;
             display: flex;
@@ -198,56 +184,79 @@
             border: 1px solid rgba(14, 165, 233, 0.3);
             border-radius: 18px;
             padding: 28px 20px 24px;
-            text-decoration: none;
             position: relative;
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
         }
 
         .featured-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blue), var(--purple));
-            opacity: 0.8;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--purple)); opacity: 0.8;
         }
 
         .featured-card:hover {
-            transform: translateY(-6px) scale(1.02);
-            border-color: rgba(168, 85, 247, 0.5);
-            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
-            background: linear-gradient(145deg, rgba(14, 165, 233, 0.12), rgba(168, 85, 247, 0.1));
+            border-color: rgba(168, 85, 247, 0.4);
+            box-shadow: 0 15px 35px rgba(14, 165, 233, 0.15);
         }
 
-        .ares-logo {
-            height: 48px;
-            width: auto;
-            margin-bottom: 14px;
-            filter: drop-shadow(0 8px 12px rgba(14, 165, 233, 0.4));
-            transition: transform 0.4s ease;
-        }
-        
-        .featured-card:hover .ares-logo {
-            transform: scale(1.08);
+        .ares-logo { height: 48px; width: auto; margin-bottom: 14px; filter: drop-shadow(0 8px 12px rgba(14, 165, 233, 0.4)); transition: transform 0.4s ease; }
+        .featured-card:hover .ares-logo { transform: scale(1.05); }
+
+        .featured-title { font-family: 'MuseoModerno', sans-serif; color: var(--text-main); font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+        .featured-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; max-width: 90%; }
+
+        /* INTERACTIVE BUTTON SYSTEM DI DALAM KARTU AREs */
+        .ares-actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 20px;
+            gap: 10px;
         }
 
-        .featured-title {
-            font-family: 'MuseoModerno', sans-serif;
+        .ares-main-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(14, 165, 233, 0.12);
+            border: 1px solid rgba(14, 165, 233, 0.3);
             color: var(--text-main);
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 6px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .ares-main-btn:hover {
+            background: var(--blue);
+            border-color: var(--blue);
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
         }
 
-        .featured-desc {
+        .ares-sub-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.85rem;
-            line-height: 1.5;
-            max-width: 90%;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1.05rem;
         }
+        .ares-sub-btn:hover { transform: translateY(-2px); color: #ffffff; }
+        .ares-sub-btn.ig:hover { border-color: #E1306C; background: rgba(225, 48, 108, 0.1); color: #E1306C; box-shadow: 0 5px 15px rgba(225, 48, 108, 0.2); }
     </style>
 </head>
 <body>
@@ -275,6 +284,9 @@
             <a href="https://www.instagram.com/dandisetio_w" class="social-btn instagram" target="_blank" title="Ikuti Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
+            <a href="https://www.facebook.com/share/1B5nMB7Gde/" class="social-btn facebook" target="_blank" title="Koneksi Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
         </div>
 
         <div class="links">
@@ -286,12 +298,25 @@
                 <i class="fas fa-graduation-cap"></i> Publikasi Google Scholar
             </a>
 
-            <a href="https://dandisw.github.io/Aquaculture-Research-Ecosystem/" class="featured-card" target="_blank">
+            <a href="https://www.researchgate.net/profile/Dandi-Setio-Wibowo" class="link-card" target="_blank">
+                <i class="fab fa-researchgate"></i> Profil ResearchGate
+            </a>
+
+            <div class="featured-card">
                 <img src="https://dandisw.github.io/Aquaculture-Research-Ecosystem/AREs%20Logo%20Outline.png" alt="AREs Logo" class="ares-logo">
                 
                 <div class="featured-title">Aquaculture Research Ecosystem</div>
                 <div class="featured-desc">Platform komputasi terintegrasi <i>client-side</i>. Menunjang statistika, bioinformatika, dan pemetaan spasial.</div>
-            </a>
+                
+                <div class="ares-actions">
+                    <a href="https://dandisw.github.io/Aquaculture-Research-Ecosystem/" class="ares-main-btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Buka Platform
+                    </a>
+                    <a href="https://www.instagram.com/aquaculture.research/" class="ares-sub-btn ig" target="_blank" title="Instagram Resmi AREs">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
